@@ -1,0 +1,12 @@
+def MultMatrices (A,B):
+    Am,An = ObtenerDimensiones(A)
+    Bm,Bn = ObtenerDimensiones(B)
+    if An != Bm:
+        print("Las Dimensiones No Son Conformables")
+        return []
+    C =  CrearMatriz(Am,An,0)
+    for i in range(Am):
+        for j in range (Bn):
+            for k in range(An):
+                C[i][j] += A[i][k] * B[k][j]
+    return C
