@@ -1,0 +1,1 @@
+El método de la bisección o corte binario es un método de búsqueda incremental que divide el intervalo siempre en 2. Si la función cambia de signo sobre un intervalo, se evalúa el valor de la función en el punto medio. La posición de la raíz se determina situándola en el punto medio del subintervalo donde exista cambio de signo. El proceso se repite hasta mejorar la aproximación.
