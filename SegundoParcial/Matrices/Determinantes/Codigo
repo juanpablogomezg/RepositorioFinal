@@ -1,0 +1,13 @@
+def detMatriz(A):
+    m,n = ObtenerDimensiones(A)
+    if m != n:
+        print("La Matriz No Es Cuadrada")
+        return -1
+    if m == 1:
+        return m
+    if m == 2:
+        return A[0][0]*A[1][1] - A[0][1]*A[1][0]
+    det = 0
+    for j in range(n):
+        det += (-1)**(j)*A[0][j]*detMatriz(getMenorMatriz(A,0,j))
+    return det
